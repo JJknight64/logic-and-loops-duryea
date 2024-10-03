@@ -101,6 +101,7 @@ namespace logic_and_loops_duryea
                 }
                 else
                 {
+                    // i don't think there's any normal way to see this text???
                     Console.Write("If you're reading this then... well I really don't know how.");
                 }
             }
