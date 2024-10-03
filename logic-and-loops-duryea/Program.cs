@@ -65,6 +65,7 @@ namespace logic_and_loops_duryea
             else
             {
                 // you done messed up!
+                // this is so it keeps asking you for an answer when you put in stupid ones
                 userChoice = "NONE";
                 while (userChoice != "left" && userChoice != "right" && userChoice != "back")
                 {
