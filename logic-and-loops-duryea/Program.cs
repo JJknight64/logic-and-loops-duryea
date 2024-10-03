@@ -56,11 +56,52 @@ namespace logic_and_loops_duryea
                     "When you uncover your eyes, you notice something shiny in the darkness...\n" +
                     "By gosh, it seems you've found it! The lost treasure of the jungle! Congratulations, " + playerName + "!\n");
             }
+            else if(userChoice == "back")
+            {
+                //easter egg
+                Console.Write(
+                    "Cool! You decided to walk back the way you came! Rad!\nThat will totally help you get out of this jungle! 100%!\n... Blockhead.\n");
+            }
             else
             {
                 // you done messed up!
-                Console.Write(
-                    "Two choices, bub. Restart and try again.\n");
+                userChoice = "NONE";
+                while (userChoice != "left" && userChoice != "right" && userChoice != "back")
+                {
+                    Console.Write(
+                        "Two choices, bub. Maybe pick one of them?.\n");
+                    userChoice = Console.ReadLine();
+                    Console.WriteLine("\nYou chose: " + userChoice + "\n");
+                }
+                if (userChoice == "left")
+                {
+                    // trail dialogue
+                    Console.Write(
+                        "As you walk along the trail, you notice the vines and greenery start to thin out.\n" +
+                        "The sun begins to shine through the tops of the trees more and more as you trudge along this muddy path.\n" +
+                        "Eventually, you trip over an inconvenient rock stuck in the mud and then..." +
+                        "You look up to notice that the jungle is behind you! Congratulations, " + playerName + ", you've escaped!\n");
+                }
+                else if (userChoice == "right")
+                {
+                    // cave dialogue
+                    Console.Write(
+                        "You steel yourself as you decide to brave the dark and dreary cave to your right.\n" +
+                        "The further along you progress, the more you think that this might've been a bad idea...\n" +
+                        "A swarm of bats suddenly startles awake at your presence and scrambles out of the cave all at once, temporarily obscuring your vision completely.\n" +
+                        "When you uncover your eyes, you notice something shiny in the darkness...\n" +
+                        "By gosh, it seems you've found it! The lost treasure of the jungle! Congratulations, " + playerName + "!\n");
+                }
+                else if (userChoice == "back")
+                {
+                    //easter egg
+                    Console.Write(
+                        "Cool! You decided to walk back the way you came! Rad!\nThat will totally help you get out of this jungle! 100%!\n... Blockhead.\n");
+                }
+                else
+                {
+                    Console.Write("If you're reading this then... well I really don't know how.");
+                }
             }
         }
     }
